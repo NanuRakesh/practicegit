@@ -18,6 +18,7 @@ class CreateSchoolsTable extends Migration
             $table->string('name');
             $table->foreignId('district_id')->constrained('districts')->onDelete('cascade');
             $table->foreignId('state_id')->constrained('states')->onDelete('cascade');
+            
             $table->timestamps();
         });
     }
